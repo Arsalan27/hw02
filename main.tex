@@ -1,9 +1,3 @@
-%CS-113 S18 HW-2
-%Released: 2-Feb-2018
-%Deadline: 16-Feb-2018 7.00 pm
-%Authors: Abdullah Zafar, Emad bin Abid, Moonis Rashid, Abdul Rafay Mehboob, Waqar Saleem.
-
-
 \documentclass[addpoints]{exam}
 
 % Header and footer.
@@ -19,7 +13,7 @@
 \usepackage[table]{xcolor}
 \usepackage{amsfonts,graphicx,amsmath,hyperref}
 \title{Habib University\\CS-113 Discrete Mathematics\\Spring 2018\\HW 2}
-\author{$<your ID>$}  % replace with your ID, e.g. oy02945
+\author{$ap03557$}  % replace with your ID, e.g. oy02945
 \date{Due: 19h, 16th February, 2018}
 
 
@@ -48,13 +42,24 @@
   \end{center}
 
   \begin{solution}
-    % Write your solution here
+  
+    (i) $f(x): Z \rightarrow R$
+        
+        Where Z is set of integers which is the domain and R is set of Real numbers which is the codomain.
+    
+    (ii) $f(x): Z^+ \rightarrow R$
+        
+        Where $Z^+$ is set of positive integers which is the domain and R is the set of Real numbers which is the codomain.
+    
   \end{solution}
   
   \part[5] Explain whether $f$ is a function from the set of all bit strings to the set of integers if $f(S)$ is the smallest $i \in \mathbb{Z}$� such that the $i$th bit of S is 1 and $f(S) = 0$ when S is the empty string. 
   
   \begin{solution}
-    % Write your solution here
+  
+    For a bijection function all the members in domain and all the members in codomain are occupied.
+    
+    For this function if the domain consist of '1' bit the codomain would give the position of $'1'$ in the string. If the domain string consist of no bit and is empty the codomain would give 0 but if the domain consist of a string that only contains the $'0'$ bit, the value of codomain is not defined. Hence the function is not defined.
   \end{solution}
 
   \part[15] For $X,Y \in S$, explain why (or why not) the following define an equivalence relation on $S$:
@@ -65,7 +70,14 @@
   \end{subparts}
 
   \begin{solution}
-    % Write your solution here
+  
+  For S to be an equivalence relation S has to be transitive, transverse and reflexive.
+  
+  (i) It is reflexive as (X,X) and (Y,Y) are in same class. It is not transitive because if (X,A) in same class and (A,Y) in same class, it is not necessary that (X,Y) would be in same class. It is symmetric as (X,Y) in same class and (Y,X) in same class too. It is not transitive so not an equivalence relation.
+  
+  (ii) It is reflexive as (X,X) and (Y,Y) both rhyme. It is transitive because if (X,A) rhyme and (A,Y) rhyme, then (X,Y) rhyme too. It is symmetric as (X,Y) in rhyme and (Y,X) rhyme. It is an equivalence relation as all three are satisfied.
+  
+  (iii) It is  reflexive as (X,X) is a subset of itself and (Y,Y) is a subset of itself. It is transitive because if (X,A) and (A,Y) then (X,Y) is a subset. It is not symmetric as (X,Y) is a subset but (Y,X) is not a subset. It is not symmetric so not an equivalence relation.
   \end{solution}
 
 \end{parts}
@@ -73,7 +85,21 @@
 %Long questions (75)
 \question[15] Let $A = f^{-1}(B)$. Prove that $f(A) \subseteq B$.
   \begin{solution}
-    % Write your solution here
+  
+  It is given that  $A = f^{-1}(B)$, so it proves that it is a one to one function. If it is a one to one function then it will always be bijective. If it is bijective then it is surjective and injective too.
+  
+  If a is such that $a \in A$ and b is such that $b \in B$.
+  
+  Then f(a)=b and $f^{-1}(b)=a$. 
+  
+  Generally f(A)=B and $f^{-1}(B)=A$
+  
+  Hence $f(A) \subseteq B$.
+  
+  
+  
+  
+  
   \end{solution}
 
 \question[15] Consider $[n] = \{1,2,3,...,n\}$ where $n \in \mathbb{N}$. Let $A$ be the set of subsets of $[n]$ that have even size, and let $B$ be the set of subsets of $[n]$ that have odd size. Establish a bijection from $A$ to $B$, thereby proving $|A| = |B|$. (Such a bijection is suggested below for $n = 3$) 
@@ -87,8 +113,20 @@
 \end{tabular}
 \end{center}
 
-  \begin{solution}
-    % Write your solution here
+  \begin{solution} 
+  
+  For this we have to make sure that if $n \in A$ then $n \notin B$ and the vice versa case.
+  
+  
+  If $[n] \notin A$ $\rightarrow$ $B \cup [n]$
+  
+  If n is not in A then we will add it to B.
+  
+  If $[n] \in B$ $\rightarrow$ $A - [n]$
+  
+  If n is in A then B would equal to [n] subtracted from A.
+  
+  Every value of codomain maps directly to the domain proving that F is surjective, and every value of domain maps to a specific value in codomain proving it to be injective. Since it is surgective and bijective, so it is bijective. Since it is bijective, it is all the domain and codomains are used hence the cardinality of A and B would be same.
   \end{solution}
   
 \question Mushrooms play a vital role in the biosphere of our planet. They also have recreational uses, such as in understanding the mathematical series below. A mushroom number, $M_n$, is a figurate number that can be represented in the form of a mushroom shaped grid of points, such that the number of points is the mushroom number. A mushroom consists of a stem and cap, while its height is the combined height of the two parts. Here is $M_5=23$:
@@ -121,11 +159,66 @@ Study the first five mushrooms carefully and make sure you can draw subsequent o
   \begin{parts}
     \part[15] Derive a closed-form for $M_n$ in terms of $n$.
   \begin{solution}
-    % Write your solution here
-  \end{solution}
+  
+  For Stem height:
+  
+  for the 1st, there is no stem
+  
+  for the 2nd, the height is 1.
+  
+  for 3rd, the height is 2.
+  
+  We see that the stem height is 1 less than the mushroom number, hence we can deduce the formula is (n-1).
+  
+  
+  
+  For the Cap width:
+  
+  for the 1st, the Cap width is 2.
+  
+  for the 2nd, it is 3.
+  
+  for the 3rd, it is 4.
+  
+  Hence we can deduce that the width is increasing by 1, so the formula would be (n+1).
+  
+  
+  
+  For the Cap height:
+  
+  Now for even the cap height would remain the same and for odd 1 would be added to it.
+  
+  We can deduce that the formula would be ($|\dfrac{n}{2}|$+1) because for the 1st the cap height is 1, for the 2nd it is 2, for the 3rd it is 2 because now the floor division takes place. 
+    
+  For the total number of dots in the nth mushroom would be:
+  
+  dots in Stem height 2(n-1)
+    
+  dots in Cap width (n+1)
+    
+  dots in Cap Height 
+  
+  $|\dfrac{n}{2}|+1-\dfrac{(|\dfrac{n}{2}|)(|\dfrac{n}{2}|+1)}{2}$
+    
+  \newline
+    
+  $M_n = 2(n-1)+(n+1)(|\dfrac{n}{2}|+1)-(\dfrac{|\dfrac{n}{2}|(|\dfrac{n}{2}|+1)}{2})$   
+      \end{solution}
     \part[5] What is the total height of the $20$th mushroom in the series? 
   \begin{solution}
-    % Write your solution here
+  
+  
+    
+    For the 20th, n=20:
+    
+    Total height=Stem height+Cap height
+    
+    =(n-1)+($|\dfrac{n}{2}|$+1)
+    
+    =(19)+(10+1)
+    
+    =30
+    
   \end{solution}
 \end{parts}
 
@@ -153,12 +246,15 @@ The \href{http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibGen.ht
   \part[10] To begin, prove that the Fibonacci series is countable.
  
     \begin{solution}
-    % Write your solution here
+    
+
+    For any series to be countable it has to form bijection mapping with a subset of natural numbers. Now to form a fibonacci sequence. For every natural number if the golden ratio is applied to it, it will converge to a number. This proves that it is bijective as all the domain is mapped to a certain codomain and all the codomain is mapped to a certain number too.
   \end{solution}
   \part[15] Consider the Modified Wythoff as any array derived from the original, where each entry of the leading diagonal (marked in blue) of the original 2D-Array is replaced with an integer that does not occur in that row. Prove that the Modified Wythoff Array is countable. 
 
   \begin{solution}
-    % Write your solution here
+   
+   Since Modified Wythoff is basically a part of the fibonacci series hence this is also countable. For the diagonal if we replace the numbers with any Natural number, for instance if we discard the first element and move the 2nd element in place of the first, 3rd in place of 2nd and likewise for the rest. Since all the numbers replaced are also Natural numbers, so it is countable because it is mapped with a subset of Natural numbers.  
   \end{solution}
 \end{parts}
 
